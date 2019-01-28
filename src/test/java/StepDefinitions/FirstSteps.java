@@ -5,7 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class FirstSteps {
-
+	
 	@Given("I want to write a step with precondition")
 	public void i_want_to_write_a_step_with_precondition() {
 	    // Write code here that turns the phrase above into concrete actions
@@ -43,17 +43,17 @@ public class FirstSteps {
 	    // Write code here that turns the phrase above into concrete actions
 	}
 
-	@Given("I want to write a step with the {string}")
+	@Given("I want to write a step with the {string} name")
 	public void i_want_to_write_a_step_with_name(String name) {
 	    // Write code here that turns the phrase above into concrete actions
 	}
 
-	@When("I check for the {int} of the step")
+	@When("I check for the step number {int}")
 	public void i_check_for_the_in_step(Integer value) {
 	    // Write code here that turns the phrase above into concrete actions
 	}
 
-	@Then("I verify the {string} in a step")
+	@Then("I verify the {string} status of the step")
 	public void i_verify_the_success_in_step(String status) {
 	    // Write code here that turns the phrase above into concrete actions
 	}
