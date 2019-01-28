@@ -14,11 +14,11 @@ Feature: Title of your feature
 
   @tag2
   Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+    Given I want to write a step with the "<name>"
+    When I check for the <value> of the step
+    Then I verify the "<status>" in a step
 
     Examples: 
       | name  | value | status  |
-      | name1 |     5 | success |
+      | name1 |     5 | Success |
       | name2 |     7 | Fail    |
