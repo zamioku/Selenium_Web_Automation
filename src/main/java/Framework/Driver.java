@@ -5,13 +5,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Driver {
 	
-	private static WebDriver driver;
+	protected static WebDriver driver;
 	
 	public void setDriver(String type) {
 		// TODO
 	}
 	
-	public static WebDriver getDriver() {
+	protected WebDriver getDriver() {
 		if(driver == null){
 			driver = new ChromeDriver();
 		}

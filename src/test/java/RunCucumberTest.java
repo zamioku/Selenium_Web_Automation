@@ -7,13 +7,13 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		dryRun=false,
 		features="src/test/resources/Features", 
-//		glue = "src/test/java/StepDefinitions", 
+//		glue = "StepDefinitions", 
 		junit = "--step-notifications",
-				monochrome=true,
+		monochrome=true,
 		plugin = {"pretty", "html:target/cucumber-html-report/"},
-		tags = { "@special" }
+			tags = { "@special" }
 		)
-public class CucumberTestRunner {
+public class RunCucumberTest {
 	
 	
 

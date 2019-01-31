@@ -14,7 +14,7 @@ public class Hooks {
 	@Before
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", "E:/Selenium/drivers/chromedriver.exe");
-		System.out.println("Opening browser: CHROME");
+		System.out.println("INFO: Opening browser - CHROME");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://google.com");
@@ -22,7 +22,12 @@ public class Hooks {
 	
 	@Before("@special")
 	public void setUpSpecial() {
-		System.out.println("This is a special set-up!");
+		System.out.println("INFO: This is a special set-up!");
+	}
+	
+	@After("@special")
+	public void tearDownSpecial(){
+		//TODO
 	}
 	
 	@After
@@ -31,7 +36,7 @@ public class Hooks {
 			System.out.println("Scenario failed: "+scenario.getName());
 			//and some additional steps
 		}
-		System.out.println("Closing browser: CHROME");
+		System.out.println("INFO: Closing browser - CHROME");
 		driver.quit();
 	}
 }

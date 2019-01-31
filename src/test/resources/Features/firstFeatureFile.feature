@@ -2,6 +2,10 @@
 Feature: Title of your feature
   I want to use this template for my feature file
 
+  Background: 
+    Given I can login with "userName"
+    And I can login
+
   @tag1
   Scenario: Title of your scenario
     Given I want to write a step with precondition
@@ -14,7 +18,7 @@ Feature: Title of your feature
 
   @tag2
   Scenario Outline: Title of your scenario outline
-    Given I want to write a step with the "<name>" name
+    Given I want to write a step with the '<name>' name
     When I check for the step number <value>
     Then I verify the "<status>" status of the step
 
