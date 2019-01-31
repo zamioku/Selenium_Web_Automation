@@ -1,4 +1,4 @@
-package Framework;
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +9,7 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 	
-	protected WebDriver driver = null;
+	protected WebDriver driver;
 	
 	@Before
 	public void setUp() {
@@ -34,7 +34,7 @@ public class Hooks {
 	public void tearDown(Scenario scenario) {		
 		if(scenario.isFailed()){
 			System.out.println("Scenario failed: "+scenario.getName());
-			//and some additional steps
+			//TODO: take screenshot
 		}
 		System.out.println("INFO: Closing browser - CHROME");
 		driver.quit();
