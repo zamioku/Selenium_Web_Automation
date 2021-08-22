@@ -1,23 +1,21 @@
 package stepDefinitions;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import framework.Driver;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class Hooks {
 	
-	protected WebDriver driver;
+//	protected WebDriver driver = null;
 	
 	@Before
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", "E:/Selenium/drivers/chromedriver.exe");
 		System.out.println("INFO: Opening browser - CHROME");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://google.com");
+		Driver.setDriver("chrome");
+		Driver.getDriver().manage().window().maximize();
+		Driver.getDriver().get("https://google.com");
 	}
 	
 	@Before("@special")
@@ -37,6 +35,6 @@ public class Hooks {
 			//TODO: take screenshot
 		}
 		System.out.println("INFO: Closing browser - CHROME");
-		driver.quit();
+		Driver.getDriver().quit();
 	}
 }
