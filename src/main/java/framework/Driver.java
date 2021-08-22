@@ -5,17 +5,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Driver {
 	
-	protected static WebDriver driver;
+	private WebDriver _driver;
 	
 	public void setDriver(String type) {
-		// TODO
+		switch (type) {
+			case "chrome":
+				_driver = new ChromeDriver();
+				break;
+			case "edge":
+				// TODO
+				break;
+			case "firefox":
+				break;
+			default:
+				System.out.println(type + " is not a supported Browser!");
+		}
 	}
 	
-	protected WebDriver getDriver() {
-		if(driver == null){
-			driver = new ChromeDriver();
+	public WebDriver getDriver() {
+		if(_driver == null){
+			_driver = new ChromeDriver();
 		}
-		return driver;
+		return _driver;
 	}
 
 }
