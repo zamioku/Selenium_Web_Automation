@@ -12,9 +12,8 @@ import org.junit.runner.RunWith;
 //		junit = "--step-notifications",
 		monochrome=true,
 		plugin = {"pretty", "html:target/cucumber-html-report/"},
-		tags = "@special and not @skip"
+		tags = "@login and not @special"
 		)
-
 public class RunCucumberTest {	
 
 }

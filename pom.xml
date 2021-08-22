@@ -4,6 +4,8 @@
   <artifactId>BDD-Automation-Project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+	<name>Selenium BDD test automation project</name>
+
 	<build>
 		<plugins>
 			<plugin>
